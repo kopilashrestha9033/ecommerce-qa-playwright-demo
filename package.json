@@ -1,0 +1,26 @@
+{
+  "name": "magento-playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright test framework for Magento e-commerce site",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "test:codegen": "npx playwright codegen https://magento.softwaretestingboard.com/",
+    "test:registration": "npx playwright test user-registration.spec.ts",
+    "test:search": "npx playwright test product-search.spec.ts",
+    "test:cart": "npx playwright test shopping-cart.spec.ts",
+    "test:checkout": "npx playwright test checkout.spec.ts"
+  },
+  "keywords": ["playwright", "typescript", "e2e", "testing", "magento"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.8.0",
+    "typescript": "^5.2.0"
+  }
+}
