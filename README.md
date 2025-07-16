@@ -1,6 +1,6 @@
 # Keeper QA Automation Assignment – Magento Demo Store
 
-This repository contains an automated test suite for the Magento Demo Store
+This repository contains an automated test suite for the Magento Demo Store, developed as part of the Keeper QA Automation Engineer technical challenge.
 
 ## 🔍 Project Overview
 
@@ -74,3 +74,8 @@ npx playwright show-report
 - Data-driven testing for products
 - Parallel cross-browser execution
 
+---
+
+## 📮 Author
+
+Assignment submitted for QA Automation Engineer role at **Keeper**.

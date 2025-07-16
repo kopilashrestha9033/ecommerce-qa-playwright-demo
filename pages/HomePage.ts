@@ -10,4 +10,9 @@ export class HomePage {
   async selectProduct(name: string) {
     await this.page.click(`text=${name}`);
   }
+
+  async search(term: string) {
+    await this.page.fill('#search', term);
+    await this.page.press('#search', 'Enter');
+  }
 }
