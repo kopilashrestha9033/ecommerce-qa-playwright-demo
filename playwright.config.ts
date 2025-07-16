@@ -1,39 +1,14 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './tests',
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: [
-    ['html'],
-    ['json', { outputFile: 'test-results/results.json' }],
-    ['junit', { outputFile: 'test-results/results.xml' }]
-  ],
   use: {
-    baseURL: 'https://magento.softwaretestingboard.com',
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    baseURL: 'https://magento.softwaretestingboard.com/',
     headless: true,
     viewport: { width: 1280, height: 720 },
-    ignoreHTTPSErrors: true,
-    actionTimeout: 30000,
-    navigationTimeout: 30000,
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
   },
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-  ],
+  testDir: './tests',
+  retries: 0,
+  reporter: [['list'], ['html']]
 });
