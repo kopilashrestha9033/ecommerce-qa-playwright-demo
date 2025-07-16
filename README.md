@@ -74,8 +74,3 @@ npx playwright show-report
 - Data-driven testing for products
 - Parallel cross-browser execution
 
----
-
-## 📮 Author
-
-Assignment submitted for QA Automation Engineer role at **Keeper**.
